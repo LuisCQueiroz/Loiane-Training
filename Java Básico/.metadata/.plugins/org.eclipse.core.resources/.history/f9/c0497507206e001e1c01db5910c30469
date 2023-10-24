@@ -1,0 +1,55 @@
+package com.luis.cursojava.exercicios01a13;
+
+import java.util.Scanner;
+
+/*Tendo como dados de entrada a altura e o sexo de uma pessoa, construa 
+ * um algoritmo que calcule seu peso ideal, utilizando as seguintes
+ * fórmulas:
+ * a) Homens = (72.7*altura) - 58
+ * b) Mulheres = (62.1*altura) - 44.7
+ * c) Peça o peso e informe se está dentro, acima ou abaixo do peso.
+ *  */
+
+public class Exercicio13 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Informe seu sexo: (M ou F)");
+		String sexo = scan.next();
+		System.out.println("Informe sua altura: ");
+		double altura = scan.nextDouble();
+		System.out.println("Informe seu Peso");
+		double peso = scan.nextDouble();
+		System.out.println();
+		
+		if (sexo == "M" | sexo == "m") {
+			double pesoIdealHomem = (72.7*altura)-58;
+			System.out.println("O Peso ideal é: " +pesoIdealHomem);			
+			
+			if (peso == pesoIdealHomem){
+				System.out.println("Parabéns, você possui o peso ideal");
+			}else if ((peso < pesoIdealHomem)){
+				System.out.println("Você possui peso abaixo do ideal, procure um médico");
+			}else {
+				System.out.println("Alerta.Você possui peso acima do ideal, procure um médico");	
+			}
+			if (peso == pesoIdealHomem){
+				System.out.println("Parabéns, você possui o peso ideal");
+			}else if ((peso < pesoIdealHomem)){
+				System.out.println("Você possui peso abaixo do ideal, procure um médico");
+			}else {
+				System.out.println("Alerta.Você possui peso acima do ideal, procure um médico");	
+			}
+		}else {
+			double pesoIdealMulher =(62.1*altura) - 44.7;
+			if (peso == pesoIdealMulher){
+				System.out.println("Parabéns, você possui o peso ideal");
+			}else if ((peso < pesoIdealMulher)){
+				System.out.println("Você possui peso abaixo do ideal, procure um médico");
+			}else {
+				System.out.println("Alerta.Você possui peso acima do ideal, procure um médico");	
+			}
+	}
+
+}
+}
