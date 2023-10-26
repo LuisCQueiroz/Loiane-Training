@@ -27,17 +27,27 @@ public class Exercicio17 {
 		
 		double areaPintar = (area + ((area * 10)/100));
 		
-		double areacoberta = Math.round(areaPintar / lataCobertura);
+		double areaCobertaLata = Math.round(areaPintar / lataCobertura);
 		
-		if (areacoberta < 1) {
-			areacoberta=1;
+		if (areaCobertaLata < 1) {
+			areaCobertaLata=1;
 		}
 		
-		double precoCobertura = areacoberta * precoLata;
+		double precoCobertura = areaCobertaLata * precoLata;
 		
 		System.out.println("Uma lata de 18 litros cobre: " + lataCobertura + " metros.");
-		System.out.println("Você irá utilizar " + areacoberta + " latas de 18 litros. O preço para compra é " + dinheiro.format(precoCobertura));
+		System.out.println("Você irá utilizar " + areaCobertaLata + " latas de 18 litros. O preço para compra é " + dinheiro.format(precoCobertura));
 		
+		double areaCobertaGalao = Math.round(areaPintar / galao);
+		
+		if (areaCobertaGalao < 1) {
+			areaCobertaGalao=1;
+		}
+		
+		double precoCoberturaGalao = areaCobertaGalao * precoGalao;
+		
+		System.out.println("\nUm galão de 3,6 litros cobre: " + galao + " metros.");
+		System.out.println("Você irá utilizar " + areaCobertaGalao + " galões de 3,6 litro. O preço para compra é " + dinheiro.format(precoCoberturaGalao));
 
 	}
 
